@@ -1,6 +1,6 @@
 .containerHeader{
     padding:0 5%;
-    margin: 2% 0;
+    margin: 1% 0;
     @include media(400px){
         padding: 0 2%;
     }
@@ -16,7 +16,7 @@
         text-align: center;
         font-size: 1.1rem;
         width: 75%;
-        margin: 2% auto;
+        margin: 1% auto;
         @include fontHeader(1rem);
         @include media(630px){
             text-align: left;

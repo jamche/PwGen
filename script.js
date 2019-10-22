@@ -113,5 +113,5 @@ clipboard.addEventListener('click',() =>{
     textarea.select();
     document.execCommand('copy');
     textarea.remove();
-    console.log("password copied")
+    swal({title:"Copied password!", icon:"success"});
 })

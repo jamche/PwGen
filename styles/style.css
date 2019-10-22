@@ -243,7 +243,7 @@ h1, h2, h3, h4, p, ul, li, a, button {
 
 .containerHeader {
   padding: 0 5%;
-  margin: 2% 0;
+  margin: 1% 0;
 }
 
 @media (max-width: 400px) {
@@ -269,7 +269,7 @@ h1, h2, h3, h4, p, ul, li, a, button {
   text-align: center;
   font-size: 1.1rem;
   width: 75%;
-  margin: 2% auto;
+  margin: 1% auto;
   font-size: 1rem;
   font-family: 'Nunito', sans-serif;
 }
