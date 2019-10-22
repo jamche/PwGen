@@ -25,7 +25,7 @@ const getNumber = () =>{
     return String.fromCharCode(Math.floor(Math.random() * 10 ) + 48);
 }
 const getSymbol = () =>{
-    const symbols = '~!@#$%^&*()_+=-\'",./?><`'
+    const symbols = '~!@#$%^&*()-+=?'
     return symbols[Math.floor(Math.random() * symbols.length)]
 }
 const randomGenerator = {
