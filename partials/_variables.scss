@@ -1,0 +1,14 @@
+@mixin fontHeader($sizeValue){
+    font-size:$sizeValue;
+    font-family: 'Nunito', sans-serif;
+}
+@mixin fontMain($sizeValue) {
+    font-size:$sizeValue;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@mixin media($width) {
+    @media (max-width: $width) {
+      @content;
+    }  
+  }

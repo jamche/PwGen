@@ -1,0 +1,106 @@
+.results{
+    background-color: #4169E1;
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    @include media(630px){
+        width: 90%;
+    }
+    @include media(400px){
+        width: 100%;
+    }
+    #result{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        @include fontMain(1.15rem);
+        @include media(630px){
+            font-size: .95rem;
+        }
+        @include media(400px){
+            font-size: .85rem;
+        }
+    }
+    #clipboard{
+        width: 50px;
+        height: 50px;
+        background-color: #f5f5f5;
+        border: none;
+        svg{
+            color:#f5f5f5
+        }
+    }
+}
+
+.settings{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include media(800px){
+        margin: 5% 0;
+    }
+    @include media(630px){
+        width: 90%;
+    }
+    @include media(400px){
+        width: 100%;
+    }
+    .setting{
+        margin: 2% 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @include media(500px){
+            margin: 4% 0;
+        }
+        label{
+            @include media(630px){
+                fz:.95rem
+            }
+            @include media(400px){
+                font-size: .85rem;
+            }
+        }
+    }
+    #length{
+        width: 50px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #uppercase,
+    #lowercase,
+    #numbers,
+    #symbols{
+        width: 30px;
+        height: 30px;
+    }
+}
+.btnGivePwd{
+    margin: 2% 0 6%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    #btnGenerate{
+        padding: 2% 4%;
+        margin:0 auto;        
+        display: flex;
+        justify-content: center;
+        width: 75%;
+        background: #4169E1;
+        border: 1px outset black;
+        @include fontMain(1.15rem);
+        @include media(630px){
+            width: 90%;
+        }
+        @include media(400px){
+            font-size: .95rem;
+            width: 100%;
+            padding: 6% 10%;
+        }
+    }
+}

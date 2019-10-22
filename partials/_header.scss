@@ -1,0 +1,31 @@
+.containerHeader{
+    padding:0 5%;
+    margin: 2% 0;
+    @include media(400px){
+        padding: 0 2%;
+    }
+    h1{
+        margin:2% auto;
+        text-align: center;
+        @include fontHeader(2rem);
+        @include media(630px){
+            font-size: 1.5rem;
+        }
+    }
+    .titleText{
+        text-align: center;
+        font-size: 1.1rem;
+        width: 75%;
+        margin: 2% auto;
+        @include fontHeader(1rem);
+        @include media(630px){
+            text-align: left;
+            margin: 6% auto;
+            font-size: .95rem;
+        }
+        @include media(400px){
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

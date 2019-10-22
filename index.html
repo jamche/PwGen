@@ -5,51 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Give Me A Password</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Nunito:400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Give Me A Password</h1>
-        <div class="titleText">
-            <p>Trouble coming up with a password? Just click any of the options belows to generate a random password. No longer do you need to struggle thinking of a new password!</p>
+    <div class="box">
+        <header>
+            <div class="container containerHeader">
+                <h1>Give Me A Password!</h1>
+                <div class="titleText">
+                    <p>Trouble coming up with a password? Just click any of the options belows to generate a random password. Once the password is displayed, click the clipboard to copy it.</p>
+                </div>
+            </div>
+        </header>
+    <main>
+        <div class="container">
+            <div class="results">
+                <span id="result"></span>
+                <button class="btn" id="clipboard">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>								
+                </button>
+            </div>
+            <div class="settings">
+                <div class="setting">
+                    <label for="length">Password Length <br>(4 - 20 characters)</label>
+                    <input type="number" id="length" min ="4" max ="20" value = "6" />
+                </div>
+                <div class="setting">
+                    <label for="uppercase">Check for uppercase</label>
+                    <input type="checkbox" id="uppercase" checked />
+                </div>
+                <div class="setting">
+                    <label for="lowercase">Check for lowercase</label>
+                    <input type="checkbox" id="lowercase" checked />
+                </div>
+                <div class="setting">
+                    <label for="numbers">Contain numbers</label>
+                    <input type="checkbox" id="numbers" checked />
+                </div>
+                <div class="setting">
+                    <label for="symbols">Contain symbols</label>
+                    <input type="checkbox" id="symbols" checked />
+                </div>
+            </div>
+            <div class="btnGivePwd">
+                <button class="btn" id="btnGenerate">
+                    Give me a password!
+                </button>
+            </div>
         </div>
     </div>
-    <div class="results">
-        <span id="result"></span>
-        <button class="btn" id="clipboard">
-            <i class="far fa-clipboard"></i>
-        </button>
-    </div>
-    <div class="settings">
-        <div class="setting">
-            <label for="length">Password Length</label>
-            <input type="number" id="length" min ="4" max ="20" value = "20" />
-        </div>
-        <div class="setting">
-            <label for="uppercase">Check for uppercase letters</label>
-            <input type="checkbox" id="uppercase" checked />
-        </div>
-        <div class="setting">
-            <label for="lowercase">Check for lowercase only</label>
-            <input type="checkbox" id="lowercase" checked />
-        </div>
-        <div class="setting">
-            <label for="numbers">Contain numbers</label>
-            <input type="checkbox" id="numbers" checked />
-        </div>
-        <div class="setting">
-            <label for="symbols">Contain symbols</label>
-            <input type="checkbox" id="symbols" checked />
-        </div>
-    </div>
-
-    <div>
-        <button class="btn" id="btnGenerate">
-            Give me a password!
-        </button>
-    </div>
-
-    <script src="script.js"></script>
+</main>
+<script src="sweetalert2.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

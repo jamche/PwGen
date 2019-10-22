@@ -1,5 +1,7 @@
 // decalre variables
 
+
+
 const result = document.getElementById('result');
 const lengthEl = document.getElementById('length');
 const uppercase = document.getElementById('uppercase');

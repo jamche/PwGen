@@ -4,20 +4,4 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;} 
-
-
-
-body{
-    background-color: #4682B4;
-    color: #FAF0E6;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    min-height: 100vh;
-    padding: 5%;
-    margin: 0 auto;
-}
-p{
-    margin: 5% 0;
-}
+.visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
