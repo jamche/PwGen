@@ -77,7 +77,7 @@ const generatePwd = (lower, upper, number, symbol, length) =>{
         });
     }
     const finalPassword = newPassword.slice(0, length)
-    let finalPasswordArr = finalPassword.split('')
+    const finalPasswordArr = finalPassword.split('')
 
     function shufflePwd(newPwdArr){
         let curr = finalPasswordArr.length, tempVal, randomI
