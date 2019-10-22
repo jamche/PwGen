@@ -75,7 +75,26 @@ const generatePwd = (lower, upper, number, symbol, length) =>{
         });
     }
     const finalPassword = newPassword.slice(0, length)
-    return finalPassword
+    let finalPasswordArr = finalPassword.split('')
+    console.log(finalPasswordArr)
+
+    function shuffleArr(array){
+        let currentIndex = finalPasswordArr.length, tempVal, randomI
+        console.log(currentIndex)
+
+        while( 0 !== currentIndex){
+            randomI = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            tempVal = array[currentIndex];
+            array[currentIndex] = array[randomI]
+            array[randomI] = tempVal
+        }
+        return array.join('')
+    }
+    shuffleArr(finalPasswordArr)
+    return shuffleArr(finalPasswordArr)
+
 }
 
 // copy to clipboard
