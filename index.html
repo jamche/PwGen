@@ -16,15 +16,15 @@
         </div>
     </div>
     <div class="results">
-        <span class="password"></span>
-        <button class="btn">
+        <span id="result"></span>
+        <button class="btn" id="clipboard">
             <i class="far fa-clipboard"></i>
         </button>
     </div>
     <div class="settings">
         <div class="setting">
             <label for="length">Password Length</label>
-            <input type="number" id="length" min ="4" max ="50" value = "20">
+            <input type="number" id="length" min ="4" max ="20" value = "20" />
         </div>
         <div class="setting">
             <label for="uppercase">Check for uppercase letters</label>
@@ -45,7 +45,7 @@
     </div>
 
     <div>
-        <button class="btn btnGenerate">
+        <button class="btn" id="btnGenerate">
             Give me a password!
         </button>
     </div>
