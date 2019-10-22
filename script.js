@@ -3,7 +3,7 @@
 
 
 const result = document.getElementById('result');
-const lengthEl = document.getElementById('length');
+const lengthVal = document.getElementById('length');
 const uppercase = document.getElementById('uppercase');
 const lowercase = document.getElementById('lowercase');
 const numbers = document.getElementById('numbers');
@@ -37,7 +37,7 @@ const randomGenerator = {
 
 
 btnGenerate.addEventListener('click', () => {
-    const length = +lengthEl.value;
+    const length = +lengthVal.value;
     const needsLower = lowercase.checked
     const needsUpper = uppercase.checked
     const needsNumbers = numbers.checked
@@ -70,32 +70,29 @@ const generatePwd = (lower, upper, number, symbol, length) =>{
     // Loop over length call generator function for each type
     for(let i = 0 ; i < length; i += optionsChecked){
         optionsCheckedArr.forEach(option =>{
-            const funcName = Object.keys(option)[0]
+            const loopRandomGen = Object.keys(option)[0]
             // console.log('funcName: ', funcName)
 
-            newPassword += randomGenerator[funcName]();
+            newPassword += randomGenerator[loopRandomGen]();
         });
     }
     const finalPassword = newPassword.slice(0, length)
     let finalPasswordArr = finalPassword.split('')
-    console.log(finalPasswordArr)
 
-    function shuffleArr(array){
-        let currentIndex = finalPasswordArr.length, tempVal, randomI
-        console.log(currentIndex)
+    function shufflePwd(newPwdArr){
+        let curr = finalPasswordArr.length, tempVal, randomI
+        while( 0 !== curr){
+            randomI = Math.floor(Math.random() * curr);
+            curr -= 1;
 
-        while( 0 !== currentIndex){
-            randomI = Math.floor(Math.random() * currentIndex);
-            currentIndex -= 1;
-
-            tempVal = array[currentIndex];
-            array[currentIndex] = array[randomI]
-            array[randomI] = tempVal
+            tempVal = newPwdArr[curr];
+            newPwdArr[curr] = newPwdArr[randomI]
+            newPwdArr[randomI] = tempVal
         }
-        return array.join('')
+        return newPwdArr.join('')
     }
-    shuffleArr(finalPasswordArr)
-    return shuffleArr(finalPasswordArr)
+    shufflePwd(finalPasswordArr)
+    return shufflePwd(finalPasswordArr)
 
 }
 
