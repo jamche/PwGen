@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Give Me A Password</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Give Me A Password</h1>
+        <div class="titleText">
+            <p>Trouble coming up with a password? Just click any of the options belows to generate a random password. No longer do you need to struggle thinking of a new password!</p>
+        </div>
+    </div>
+    <div class="results">
+        <span class="password"></span>
+        <button class="btn">
+            <i class="far fa-clipboard"></i>
+        </button>
+    </div>
+    <div class="settings">
+        <div class="setting">
+            <label for="length">Password Length</label>
+            <input type="number" id="length" min ="4" max ="50" value = "20">
+        </div>
+        <div class="setting">
+            <label for="uppercase">Check for uppercase letters</label>
+            <input type="checkbox" id="uppercase" checked />
+        </div>
+        <div class="setting">
+            <label for="lowercase">Check for lowercase only</label>
+            <input type="checkbox" id="lowercase" checked />
+        </div>
+        <div class="setting">
+            <label for="numbers">Contain numbers</label>
+            <input type="checkbox" id="numbers" checked />
+        </div>
+        <div class="setting">
+            <label for="symbols">Contain symbols</label>
+            <input type="checkbox" id="symbols" checked />
+        </div>
+    </div>
+
+    <div>
+        <button class="btn btnGenerate">
+            Give me a password!
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
